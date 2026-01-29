@@ -3,10 +3,124 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <!-- Tailwind CSS -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="./style.css">
   </head>
   <body>
-    
+    <!-- Header -->
+    <header class="max-w-7xl mx-auto px-10">
+        <!-- Navbar -->
+        <nav class="py-8 sticky top-0 left-0 right-0 bg-white z-50">
+            <div class="flex justify-between items-center">
+                <div class="flex gap-2 items-center">
+                    <img src="./assets/logo.png" alt="" class="max-w-6 md:max-w-9">
+                    <a class="font-extrabold text-xl md:text-3xl">Shunno <span class="text-[#FF5400]">Travel</span></a>
+                </div>
+                <div>
+                    <ul class="hidden md:flex gap-7 text-[#424247] text-md md:text-lg">
+                        <li><a href="#" class="text-[#FF5400] font-semibold">Home</a></li>
+                        <li class="relative"><a href="#" class="group inline-block">Packages
+                            <hr class="mt-1 h-0.5 w-0 border-0 bg-[#FF5400] group-hover:w-full transition-all duration-300 ">
+                        </a></li>
+                        <li class="relative"><a href="#" class="group inline-block">Testimonial
+                            <hr class="mt-1 h-0.5 w-0 border-0 bg-[#FF5400] group-hover:w-full transition-all duration-300 ">
+                        </a></li>
+                        <li class="relative"><a href="#" class="group inline-block">Blog
+                            <hr class="mt-1 h-0.5 w-0 border-0 bg-[#FF5400] group-hover:w-full transition-all duration-300 ">
+                        </a></li>
+                        <li class="relative"><a href="#" class="group inline-block">Contact
+                            <hr class="mt-1 h-0.5 w-0 border-0 bg-[#FF5400] group-hover:w-full transition-all duration-300 ">
+                        </a></li>
+                    </ul>
+                    <button id="mobile-btn" class="md:hidden text-2xl">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>  
+            </div>
+            <!-- Mobile Menu -->
+             <div id="mobile-menu" class="hidden md:hidden absolute right-10 top-20 w-50 p-4 bg-white shadow-lg rounded-lg transition-all duration-300">
+                <ul class="flex flex-col gap-4 text-[#424247] flex-end">
+                    <li><a href="#" class="text-[#FF5400] font-semibold">Home</a></li>
+                    <li><a href="#">Packages</a></li>
+                    <li><a href="#">Testimonial</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+             </div>
+        </nav>
+
+        <!-- Banner -->
+        <div class="max-w-7xl mx-auto rounded-lg overflow-hidden relative bg-[url('./assets/hero.png')] bg-cover bg-center mt-5">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/60 to-black/10"></div>
+            <div class="flex flex-col items-center justify-center gap-12 md:gap-0 py-10 md:py-28 px-6 z-10 relative">
+                <!-- Banner Content -->
+                <div class="max-w-2xl w-full text-white text-center">
+                    <h1 class="text-3xl md:text-6xl font-extrabold md:mb-6 mb-2">Explore Your Travel</h1>
+                    <p class="mb-4 md:mb-10 text-sm md:text-base">Explore breathtaking destinations, curated travel packages, and unforgettable experiences with Shunno Travel. Your journey begins here!</p>
+                </div>
+                    
+                <!-- banner Form -->
+                <div class="max-w-3xl w-full bg-white/40 p-4 rounded-lg shadow-lg items-center">
+                    <form action="" class="flex gap-2 md:gap-5 flex-col md:flex-row">
+                        <div class="flex-1">
+                            <input type="text" placeholder="Where go" class="box-border w-full bg-white placeholder:text-[#13131880] text-sm text-[#13131880] p-3 outline-none rounded-lg">
+                        </div>
+                        <div class="flex-1 relative w-full">
+                            <select name="" id="" class="box-border w-full p-3 appearance-none bg-white text-sm text-[#13131880] rounded-lg outline-none">
+                                <option value="">When</option>
+                                <option value="">This Weekend</option>
+                                <option value="">Next Week</option>
+                                <option value="">Next Month</option>
+                            </select>
+                            <div class="pointer-events-none absolute inset-y-0 right-2 flex items-center">
+                                <i class="fa fa-chevron-down text-gray-500"></i>
+                            </div>
+                        </div>
+                        <div class="flex-1 relative w-full">
+                            <select name="" id="" class="box-border w-full p-3 appearance-none bg-white text-sm text-[#13131880] rounded-lg outline-none">
+                                <option value="">Select Type</option>
+                                <option value="">Adventure</option>
+                                <option value="">Honeymoon</option>
+                                <option value="">Family Tour</option>
+                                <option value="">Group Tour</option>
+                            </select>
+                            <div class="pointer-events-none absolute inset-y-0 right-2 flex items-center">
+                                <i class="fa fa-chevron-down text-gray-500"></i>
+                            </div>
+                        </div>
+                        <div class="flex-1">
+                            <button class="bg-[#FF5400] border-[#FF5400] font-semibold border-2 box-border w-full text-white p-3 rounded-lg text-sm hover:bg-white hover:text-[#FF5400] hover:border-[#FF5400] transition-all duration-300"><i class="fa fa-search" aria-hidden="true"></i> Find Now</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Popular section -->
+     <section class="max-w-7xl mx-auto px-20">
+
+     </section>
+
+
+
+
+    <!-- Js -->
+    <script>
+        //Mobile Menu Toggle
+        const mobileBtn = document.getElementById('mobile-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
   </body>
 </html>
